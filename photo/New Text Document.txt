@@ -1,0 +1,15 @@
+<motion.div style={{ y: bgY, scale: bgScale }} className="absolute inset-0">
+        <motion.img
+          src= {heroImage}
+          alt="Pegunungan berkabut"
+          className="h-full w-full object-cover"
+          initial={{ scale: 1.2, opacity: 0, filter: "blur(14px)" }}
+          animate={active ? { scale: 1, opacity: 1, filter: "blur(0px)" } : {}}
+          transition={{ duration: 1.8, ease: EASE }}
+        />
+        <motion.div
+          style={{ opacity: vignetteOpacity }}
+          className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/30 to-ink"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/50 via-transparent to-ink/30" />
+      </motion.div>
